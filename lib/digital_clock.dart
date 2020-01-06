@@ -4,26 +4,25 @@
 
 import 'dart:async';
 
+import 'package:flutter/services.dart';
 import 'package:flutter_clock_helper/model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-enum _Element {
-  background,
-  text,
-  shadow,
-}
+enum _Element { background, hourText, minuteText, hourShadow, minuteShadow }
 
 final _lightTheme = {
-  _Element.background: Color(0xFF81B3FE),
-  _Element.text: Colors.white,
-  _Element.shadow: Colors.black,
+  _Element.background: Colors.white,
+  _Element.hourText: Color.fromRGBO(0, 5, 33, 1),
+  _Element.minuteText: Color.fromRGBO(255, 0, 170, 1),
 };
 
 final _darkTheme = {
-  _Element.background: Colors.black,
-  _Element.text: Colors.white,
-  _Element.shadow: Color(0xFF174EA6),
+  _Element.background: Color.fromRGBO(0, 5, 33, 1),
+  _Element.hourText: Colors.white,
+  _Element.minuteText: Color.fromRGBO(255, 0, 170, 1),
+  _Element.hourShadow: Colors.white,
+  _Element.minuteShadow: Color.fromRGBO(255, 0, 170, 1),
 };
 
 /// A basic digital clock.
@@ -45,6 +44,9 @@ class _DigitalClockState extends State<DigitalClock> {
   @override
   void initState() {
     super.initState();
+    // Set landspace mode
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.landscapeRight, DeviceOrientation.landscapeLeft]);
     widget.model.addListener(_updateModel);
     _updateTime();
     _updateModel();
