@@ -1,11 +1,14 @@
-# Digital Clock
+# Digital Clock with Flutter
+This app was created for [Flutter.dev competion](https://flutter.dev/clock)
 
-This app is an example of a digital clock.
-It has a light theme and a dark theme.
-See the [Analog Clock](../analog_clock) if you'd like an example that displays the weather and location.
+## Todo
+- [x] Changed font
+- [x] Changed theme colors
+- [x] Changed Clock Design
+- [x] Added location info
+- [x] Added weather info
+- [x] Added temp info
 
-<img src='digital.gif' width='350'>
-
-<img src='digital_dark.png' width='350'>
-
-<img src='digital_light.png' width='350'>
+## Design Link 
+Here : https://www.behance.net/gallery/90258127/Clock-App
+<img src='https://mir-s3-cdn-cf.behance.net/project_modules/fs/0495de90258127.5e1309e377851.png' width='600'>
