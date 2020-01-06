@@ -19,6 +19,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   fonts:
-    - family: Bahnschrift
+    - family: Montserrat
       fonts:
-        - asset: third_party/BAHNSCHRIFT.ttf
+        - asset: third_party/Montserrat-Thin.ttf
+        - asset: third_party/Montserrat-Light.ttf
+        - asset: third_party/Montserrat-Medium.ttf
+        - asset: third_party/Montserrat-Regular.ttf
